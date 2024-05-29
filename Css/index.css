@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    /*  SetTimeout e setlnterval */
+
+
+
+    /*Modal*/
+
+
+
+.button{
+    width: 20rem;
+    height: 6rem;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    transition: all .3s;
+}
+
+.button:hover{
+    background-color: #000;
+    color: #ffff;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal.active .box{
+    transform: translateY(0);
+}
+.modal .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.modal .box{
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20px);
+    transition: transform .3s;
+}
+
+.modal .box .close{
+    position: absolute;
+    top: -51px;
+    right: 0;
+    width: 100px;
+    height: 43px;
+    border-radius: 5px;
+    background-color: #ffff;
+    border: 1px solid #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+
+}
+.modal .box h2{
+    font-size: 1.8rem;
+}
+
+    /* NAVEGAÇÃO SUAVE DE LINKS INTERNOS*/
+/*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}*/
+header{
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    z-index: s;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+}
+header ul{
+    display: flex;
+}
+header ul li:not(:first-child){
+    margin-left: 1.6rem;
+}
+header ul li a {
+    display: inline-block;
+    padding: 1rem;
+    border: 2px solid #000;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    color: #000;
+    transition: color .3s, background-color .3s;
+}
+header ul li a:hover{
+    background-color:#000;
+    color: #ffffff;
+}
+section{
+    width: 100%;
+    height: calc(100vh - 8rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}
+section h1{
+    color: white;
+    font-size: 3.2rem;
+}
+section.blue{
+    background-color: blue;
+}
+section.red{
+    background-color: red;
+}
+section.green{
+    background-color: green;
+}
+
+   /*ACCORDION*/ 
+/*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}*/
+
+.accordion.active .title {
+    border-bottom: 2px solid #000;
+}
+
+.accordion.active .title .icon img {
+    transform: rotate(180deg);
+}
+
+.accordion.active p {
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    animation: fadeIn .3s forwards;
+
+}
+  
+.accordion {
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+  
+.accordion .title {
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .3s;
+}
+.accordion .title h3{
+    font-size: 1.6rem;
+}
+  
+.accordion .title .icon {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.accordion .title .icon img {
+    max-width: 12px;
+    transition: transform .3s;
+}
+  
+.accordion p {
+    display: none;
+    font-size: 16px;
+    padding: 1.5rem;
+}
+  
+.accordion:hover .title {
+    background-color: #e7e7e7;
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}  
+
+
+        /* NAVEGAÇÃO EM TABS */
+/*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}*/
+
+body{
+    margin: 0.5rem;
+}
+.nav-tabs{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.nav-tabs li:not(:first-child){
+    margin-left: 1.5rem;
+}
+
+.nav-tabs li a{
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.8rem;
+    border: 2px solid grey;
+    color: black;
+    transition: .3s;
+}
+
+.nav-tabs li a.active, .nav-tabs li a:hover{
+    background-color: grey;
+    color: white;
+    transition: .3s;
+}
+
+.tab-content{
+    border: 2px solid black;
+    border-radius: 5px;
+    max-width: 50%;
+    padding: 1.5rem;
+}
+
+.tab-content .tab-pane{
+    display: none;
+}
+.tab-content .tab-pane.active{
+    display: block;
+    animation: fadeIn .3s forwards; /* add depois que fiz o @...*/
+}
+
+.tab-content .tab-pane h2{
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.tab-content .tab-pane p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} 
+        /* DEMAIS */
+/*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Arial', sans-serif;
+   font-size: 18px;
+}*/
+html{
+    background-color: #ffffff;
+    transition: all .3s;
+}
+html.theme-black{
+    background-color: black;
+    color: white;
+}
+h1{
+    color: black;
+}
+.tit{
+    color: black;
+}
+
+button{
+    font-size: 20px;
+    transition: all .3s aese;
+}
+button.active{
+    background: black;
+    color: white;
+    border: none;
+}
+img{
+    max-width: 400px;
+    display: block;
+}
+span{
+    font-size: 18px;
+}
+input{
+    padding: 7px;
+}
