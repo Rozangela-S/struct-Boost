@@ -27,6 +27,10 @@
      --gray-100: #F5F6FA;
 }
 
+body
+{
+     line-height: 1.6;
+}
 html
 {
      background-color: var(--gray-900);
@@ -112,6 +116,12 @@ header
      row-gap: 8px;
      margin-bottom: 3.5%;
      cursor: pointer;
+     transition: .3s ease;
+}
+
+.frame3:hover
+{
+     background-color: var(--pink-20);
 }
 
 .text-contato
@@ -128,6 +138,12 @@ header
 
                              /* body*/
 
+main
+{
+     width: auto;
+     display: flex;
+     flex-wrap: wrap;
+}                           
 .hero
 {
      max-width: 100%;
@@ -220,6 +236,12 @@ header
      margin-right: 25%;
      background-color: var(--pink-10);
      cursor: pointer;
+     transition: 0.3s ease;
+}
+
+.frame-3:hover
+{
+     background-color: var(--pink-20);
 }
 
 .text-fazer
@@ -564,6 +586,7 @@ p
 
 .frame2268
 {
+     cursor: pointer;
      width: 850px;
      height: 358px;
      border: 2px;
@@ -649,6 +672,7 @@ p
 
 .frame2293
 {
+     
      width: 500px;
      height: 82px;
      margin-top: 5%;
@@ -682,6 +706,7 @@ p
 
 .frame2269
 {
+     cursor: pointer;
      width: 520px;
      height: 358px;
      border: 2px;
@@ -719,6 +744,7 @@ p
 
 .frame2289, .frame2290, .frame2291
 {
+     cursor: pointer;
      width: 400px;
      height: 358px;
      border: 2px solid var(--gray-700);
@@ -760,6 +786,7 @@ p
      align-items: center;
      justify-content: center;
      background-color: var(--pink-10);
+     margin-top: 10%;
 
 }
 .frame2267
@@ -775,6 +802,7 @@ p
      height: 380px;
      row-gap: 16px;
      justify-content: center;
+     
 }
 
 h1{
@@ -810,8 +838,13 @@ h1{
      margin-top: 4%;
      margin-left: 30%;
      background-color: var(--gray-100);
+     cursor: pointer;
+     transition: 0.3s ease;
 }
-
+ .frame03:hover
+ {
+     background-color: var(--gray-200);
+ }
 .texxt
 {
      width: 251px;
@@ -923,6 +956,7 @@ footer
      text-align: center;
      color: var(--gray-600);
      padding: 2%;
+     text-decoration: none;
 }
 
 h4{
@@ -946,7 +980,8 @@ h4{
      line-height: 19.36px;
      text-align: center;
      color: var(--gray-600);
-     padding: 4%
+     padding: 4%;
+     text-decoration: none;
 }
 
 .frame2326
